@@ -15,14 +15,20 @@ namespace Grptwomvc.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Description of Group two";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Images()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Images from Nasa";
+
+            return View();
+        }
+        public ActionResult Lorem_Ipsum()
+        {
+            ViewBag.Message = "Lorem Ipsum";
 
             return View();
         }
