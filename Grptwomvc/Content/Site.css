@@ -3,6 +3,10 @@
     padding-bottom: 20px;
 }
 /*Add CSS styling to navbar*/
+.navbar{
+    background-color:#516b78;
+}
+
 .navbar-nav li:hover{
     background-color:slategray;
 }
