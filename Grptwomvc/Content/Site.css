@@ -15,12 +15,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+/* Add CSS styling to index jumbotron*/
 .jumbotron {
   background-image:url('http://theme-background-videos.s3.amazonaws.com/bokeh.jpg');
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size:cover;
-
 }
 /*Format body content*/
 .body-content .info .container li{
