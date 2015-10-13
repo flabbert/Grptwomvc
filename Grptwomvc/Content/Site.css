@@ -6,10 +6,17 @@
 .navbar{
     background-color:#516b78;
 }
+.navbar-brand {
+     color: white !important
+}
 
 .navbar-nav li:hover{
     background-color:slategray;
 }
+.navbar .nav > li >a {
+    color: white;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
