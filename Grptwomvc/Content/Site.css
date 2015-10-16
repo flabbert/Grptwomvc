@@ -16,6 +16,16 @@
 .navbar .nav > li >a {
     color: white;
 }
+.links{
+    height: 50px;
+    float: left;
+    padding:10px;
+
+}
+.links:hover
+{
+    background-color:#ffffff;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
