@@ -32,5 +32,11 @@ namespace Grptwomvc.Controllers
 
             return View();
         }
+        public ActionResult Message_board()
+        {
+            ViewBag.Message = "Message board";
+
+            return View();
+        }
     }
 }
