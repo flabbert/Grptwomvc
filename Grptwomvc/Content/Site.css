@@ -10,11 +10,25 @@
      color: white !important
 }
 
-.navbar-nav li:hover{
+/*.navbar-nav li:hover{
     background-color:slategray;
 }
 .navbar .nav > li >a {
     color: white;
+}*/
+
+.links{
+    height: 50px;
+    float: left;
+    padding:10px;
+    padding-top:25px;
+    color:#ffffff;
+    font-size:18px;
+}
+
+.links:hover
+{
+    background-color:#808080;
 }
 
 /* Set padding to keep content from hitting the edges */
