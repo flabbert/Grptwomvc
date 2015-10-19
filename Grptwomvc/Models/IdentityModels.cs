@@ -24,6 +24,8 @@ namespace Grptwomvc.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Message> Messages { get; set;}
+        public DbSet<Post> Posts { get; set; }
 
         public static ApplicationDbContext Create()
         {
