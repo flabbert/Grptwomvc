@@ -1,7 +1,15 @@
-﻿@{
+﻿@model List<Grptwomvc.Models.Message>
+@{
     ViewBag.Title = "Home Page";
 }
 
+@foreach (var msg in Model)
+{
+    <h3>@msg.Title</h3>
+    <div class="body-content">@msg.Body</div>
+    <div class="author">@msg.Author @*just nu vil bare user id'en komma her, men flabbert kan haxxa inn en liten funksjon som gir username istället senere*@</div>
+    <div class="messagelink">@Html.ActionLink("Full Message with replies", "Details", "Message", new { id = msg.Id }, null)</div>
+}
 <div class="jumbotron">
     <h1>Välkommen, vi är Grupp 2</h1>
     <p class="lead">Vi skickar in lite mer information här tycker jag</p>

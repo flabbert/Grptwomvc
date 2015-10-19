@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Grptwomvc.Models;
 
 namespace Grptwomvc.Controllers
 {
     public class HomeController : Controller
     {
+        ApplicationDbContext _db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            return View();
+            List<Message> mlist = _db.Messages.ToList();
+            return View(mlist);
         }
 
         public ActionResult About()
         {
+            
             ViewBag.Message = "Description of Group two";
 
             return View();
