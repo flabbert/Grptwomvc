@@ -54,7 +54,30 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+@media screen and (max-width : 1200px) {
+    #left-content {
+        width:50%;
+    }
+    #right-content {
+        width:46%;
+    }
 
+    #wrapper {
+        width:100%;
+    }
+
+        #top-image {
+        background-size: 100%;
+        width: 100%;
+        padding-top: 54%;
+        height: 0;
+    }
+
+}
+
+@media screen and (max-width : 340px){
+
+    /*** Main Menu Responsive ***/
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
