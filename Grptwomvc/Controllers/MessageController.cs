@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Grptwomvc.Models;
 using Microsoft.AspNet.Identity;
+using System.Security.Claims;
 
 namespace Grptwomvc.Controllers
 {
@@ -48,9 +49,12 @@ namespace Grptwomvc.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Body,Author")] Message message)
+        public ActionResult Create(string Title, string Body)
         {
+            Message message = new Message();
+            message.Title = Title;
+            message.Body = Body;
+            message.Author = User.Identity.GetUserId();
             if (ModelState.IsValid)
             {
                 db.Messages.Add(message);
