@@ -1,7 +1,14 @@
-﻿body {
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
+.jumbotron text center {
+
+    background-color:coral;
+    color: white;
+}
+
 /*Add CSS styling to navbar*/
 .navbar{
     background-color:#516b78;
@@ -10,12 +17,18 @@
      color: white !important
 }
 
-/*.navbar-nav li:hover{
-    background-color:slategray;
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
 }
-.navbar .nav > li >a {
-    color: white;
-}*/
 
 .links{
     height: 50px;
@@ -54,30 +67,7 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-@media screen and (max-width : 1200px) {
-    #left-content {
-        width:50%;
-    }
-    #right-content {
-        width:46%;
-    }
 
-    #wrapper {
-        width:100%;
-    }
-
-        #top-image {
-        background-size: 100%;
-        width: 100%;
-        padding-top: 54%;
-        height: 0;
-    }
-
-
-
-@media screen and (max-width : 340px){
-
-    /*** Main Menu Responsive ***/
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
