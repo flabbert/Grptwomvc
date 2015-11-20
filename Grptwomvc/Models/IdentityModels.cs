@@ -23,10 +23,10 @@ namespace Grptwomvc.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.CreateIfNotExists();
         }
         public DbSet<Message> Messages { get; set;}
         public DbSet<Post> Posts { get; set; }
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

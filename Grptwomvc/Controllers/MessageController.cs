@@ -19,7 +19,17 @@ namespace Grptwomvc.Controllers
         // GET: Message
         public ActionResult Index()
         {
-            return View(db.Messages.ToList());
+            List<Message> messages = db.Messages.ToList();
+            if(messages == null)
+            {
+                return View();
+            }
+            else
+            {
+                return View(messages);
+            }
+
+ 
         }
 
         // GET: Message/Details/5

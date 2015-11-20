@@ -1,4 +1,4 @@
-namespace Grptwomvc.Migrations
+namespace Grptwomvc.Migrate
 {
     using System;
     using System.Data.Entity;
