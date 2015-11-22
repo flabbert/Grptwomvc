@@ -12,44 +12,91 @@
     <div class="messagelink">@Html.ActionLink("Full Message with replies", "Details", "Message", new { id = msg.Id }, null)</div>
         }
 }
-<div class="jumbotron">
-        
-        <h1>Our Company</h1>
-        <p>  We do this bla bla:</p>
-        
-    </div>
+<div class="container">
+    <h2>Activate Carousel with JavaScript</h2>
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li class="item1 active"></li>
+            <li class="item2"></li>
+            <li class="item3"></li>
+            <li class="item4"></li>
+        </ol>
 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Text goes here</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices ullamcorper vehicula. Ut auctor tellus vel enim feugiat vulputate.
-            Aenean dapibus augue quis sem volutpat cursus. Ut at rhoncus magna. Donec dolor risus, hendrerit ac fermentum non, aliquet vitae nisi.
-        </p>
+            <div class="item active">
+                <img src="http://www.thesharkguys.com/wp-content/uploads/2010/03/killerwhalestraightahead.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="http://sites.psu.edu/sdm5415/wp-content/uploads/sites/9169/2014/02/blurb_mparty6_mario_20080911.jpg" alt="Chania" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="http://www.twu.edu/downloads/ws/ws_pride_page_pic.jpg" alt="Heart" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Flowers</h3>
+                    <p>Beatiful flowers in Kolymbari, Crete.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="http://sites.psu.edu/sdm5415/wp-content/uploads/sites/9169/2014/02/blurb_mparty6_mario_20080911.jpg" alt="mario" width="460" height="345">
+                <div class="carousel-caption">
+                    <h3>Flowers</h3>
+                    <p>Beatiful flowers in Kolymbari, Crete.</p>
+                </div>
+            </div>
+
         </div>
-    <div class="col-md-4">
-        <h2>Text goes here</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices ullamcorper vehicula. Ut auctor tellus vel enim feugiat vulputate.
-            Aenean dapibus augue quis sem volutpat cursus. Ut at rhoncus magna. Donec dolor risus, hendrerit ac fermentum non, aliquet vitae nisi.
-            Nullam id volutpat orci. Mauris pretium, nulla vitae convallis sagittis, risus ligula ultrices arcu, ut aliquam felis mi non eros.
-            <br />
-            <br />
-            In et gravida purus, sed fringilla justo. Maecenas vel commodo felis, eleifend cursus felis. Vivamus suscipit lectus lacus.
-            Etiam sed volutpat arcu, mollis varius tortor. Quisque placerat at ligula sed porta. Suspendisse pellentesque eros id neque blandit, quis laoreet arcu mollis.
-            Integer rutrum lobortis mattis. Quisque ultricies id lectus at gravida. Pellentesque fermentum eu nisl eget varius. Nulla facilisi. Nam eu turpis nunc.
-            Praesent et eleifend tortor. In hac habitasse platea dictumst. Mauris molestie vel ante sit amet blandit. Nam sollicitudin felis sed arcu molestie pulvinar.
-        <p><a class="btn btn-default" href="http://www.lipsum.com/feed/html"target="_blank">Learn more &raquo;</a></p>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Text goes here</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices ullamcorper vehicula. Ut auctor tellus vel enim feugiat vulputate.
-            Aenean dapibus augue quis sem volutpat cursus. Ut at rhoncus magna. Donec dolor risus, hendrerit ac fermentum non, aliquet vitae nisi.
-            Nullam id volutpat orci. Mauris pretium, nulla vitae convallis sagittis, risus ligula ultrices arcu, ut aliquam felis mi non eros.
-        <p><a class="btn btn-default" href="http://www.lipsum.com/feed/html"target="_blank">Learn more &raquo;</a></p>
-        </p>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
+
+<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel();
+
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
