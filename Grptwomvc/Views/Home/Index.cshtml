@@ -9,7 +9,7 @@
     <h3>@msg.Title</h3>
     <div class="body-content">@msg.Body</div>
     <div class="author">@msg.Author @*just nu vil bare user id'en komma her, men flabbert kan haxxa inn en liten funksjon som gir username istället senere*@</div>
-    <div class="messagelink">@Html.ActionLink("Full Message with replies", "Details", "Message", new { id = msg.Id }, null)</div>
+    <div class="messagelink">@Html.ActionLink("Read Message", "Details", "Message", new { id = msg.Id }, null)</div>
         }
 }
 <div class="container">
@@ -25,15 +25,13 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-
             <div class="item active">
                 <img src="http://www.thesharkguys.com/wp-content/uploads/2010/03/killerwhalestraightahead.jpg" alt="Chania" width="460" height="345">
                 <div class="carousel-caption">
                     <h3>Chania</h3>
-                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                    <p>This is a killer whale</p>
                 </div>
             </div>
-
             <div class="item">
                 <img src="http://sites.psu.edu/sdm5415/wp-content/uploads/sites/9169/2014/02/blurb_mparty6_mario_20080911.jpg" alt="Chania" width="460" height="345">
                 <div class="carousel-caption">
@@ -41,7 +39,6 @@
                     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
                 </div>
             </div>
-
             <div class="item">
                 <img src="http://www.twu.edu/downloads/ws/ws_pride_page_pic.jpg" alt="Heart" width="460" height="345">
                 <div class="carousel-caption">
@@ -49,7 +46,6 @@
                     <p>Beatiful flowers in Kolymbari, Crete.</p>
                 </div>
             </div>
-
             <div class="item">
                 <img src="http://sites.psu.edu/sdm5415/wp-content/uploads/sites/9169/2014/02/blurb_mparty6_mario_20080911.jpg" alt="mario" width="460" height="345">
                 <div class="carousel-caption">
@@ -57,7 +53,6 @@
                     <p>Beatiful flowers in Kolymbari, Crete.</p>
                 </div>
             </div>
-
         </div>
 
         <!-- Left and right controls -->
