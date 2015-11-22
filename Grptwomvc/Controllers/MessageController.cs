@@ -28,8 +28,6 @@ namespace Grptwomvc.Controllers
             {
                 return View(messages);
             }
-
- 
         }
 
         // GET: Message/Details/5
