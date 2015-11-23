@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+
 }
 
 .jumbotron text center {
@@ -9,13 +10,48 @@ body {
     color: white;
 }
 
+h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: #111;
+}
+
 /*Add CSS styling to navbar*/
-.navbar{
+navbar {
     background-color:#516b78;
+
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
 }
-.navbar-brand {
-     color: white !important
+
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
 }
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+ .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
 
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
@@ -47,16 +83,34 @@ body {
 {
     background-color:#808080;
 }
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
 
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 /* Add CSS styling to index jumbotron*/
-.jumbotron {
-  background-image:url('http://theme-background-videos.s3.amazonaws.com/bokeh.jpg');
-}
+
+
 /*Format body content*/
 .body-content .info .container li{
     font-size:25px;
@@ -78,3 +132,4 @@ select,
 textarea {
     max-width: 280px;
 }
+
