@@ -12,6 +12,7 @@ namespace Grptwomvc.Controllers
         ApplicationDbContext _db = new ApplicationDbContext();
         public ActionResult Index()
         {
+
             List<Message> mlist = _db.Messages.Where(q=> q.Id > 0).ToList();
             return View(mlist);
         }
