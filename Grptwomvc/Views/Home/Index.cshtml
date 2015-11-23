@@ -2,15 +2,17 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<div class="messagebox">
+
 @if (Model != null)
 {
-        foreach (var msg in Model)
+    <div class="messagebox">
+       @foreach (var msg in Model)
         {
-            <strong>@msg.Title - </strong><span class="messagelink">@Html.ActionLink("Read Message", "Details", "Message", new { id = msg.Id }, null)</span><br />
+        <strong>@msg.Title - </strong><span class="messagelink">@Html.ActionLink("Read Message", "Details", "Message", new { id = msg.Id }, null)</span><br />
         }
+    </div>
 }
-</div>
+
 <div class="container text-center">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
