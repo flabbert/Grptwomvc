@@ -13,7 +13,7 @@ namespace Grptwomvc.Controllers
         public ActionResult Index()
         {
 
-            List<Message> mlist = _db.Messages.Where(q=> q.Id > 0).ToList();
+            List<Message> mlist = _db.Messages.Where(q=> q.Id > 0).Take(5).ToList();
             return View(mlist);
         }
 

@@ -2,16 +2,15 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<div class="messagebox">
 @if (Model != null)
 {
         foreach (var msg in Model)
         {
-    <h3>@msg.Title</h3>
-    <div class="body-content">@msg.Body</div>
-    <div class="author">@msg.Author @*just nu vil bare user id'en komma her, men flabbert kan haxxa inn en liten funksjon som gir username istället senere*@</div>
-    <div class="messagelink">@Html.ActionLink("Read Message", "Details", "Message", new { id = msg.Id }, null)</div>
+            <strong>@msg.Title - </strong><span class="messagelink">@Html.ActionLink("Read Message", "Details", "Message", new { id = msg.Id }, null)</span><br />
         }
 }
+</div>
 <div class="container text-center">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -46,6 +45,7 @@
                     <p>Wibbelywobbely</p>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- Left and right controls -->

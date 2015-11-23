@@ -47,8 +47,15 @@
     </table>
             <form method="post" action="@Url.Action("Create")"
                   data-gt-ajax="true" data-gt-target="#postlist">
+                <label>Title</label>
                 <input class="datatitle" type="text" name="Title" />
+                <label>Body</label>
                 <input class="databody" type="text" name="Body" />
+                @if(!Request.IsAuthenticated)
+                {
+                    <label>Name</label>
+                    <input class="username" type="text" name="UserName" />
+                }
                 <input type="submit" value="Add Comment" />
             </form>
         </div>

@@ -11,12 +11,12 @@
         if ($('.datatitle').val() == false)
         {
             error_free = false;
-            error_message = "title not written";
+            error_message = "title not written ";
         }
         if ($('.databody').val() == false)
         {
             error_free = false;
-            error_message = "body not written";
+            error_message += "body not written";
         }
         if (error_free)
         {

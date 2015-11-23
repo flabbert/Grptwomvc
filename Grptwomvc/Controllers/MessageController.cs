@@ -57,12 +57,19 @@ namespace Grptwomvc.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Create(string Title, string Body)
+        public ActionResult Create(string Title, string Body, string UserName)
         {
             Message message = new Message();
             message.Title = Title;
             message.Body = Body;
-            message.Author = User.Identity.GetUserId();
+            if(Request.IsAuthenticated)
+            {
+                message.Author = User.Identity.GetUserName();
+            }
+            else
+            {
+                message.Author = UserName;
+            }
             if (ModelState.IsValid)
             {
                 db.Messages.Add(message);
