@@ -3,29 +3,63 @@
 }
 
 
-<h2>Pictures from Nasa</h2>
-
-<div class="row">
-    <div class="col-md-4">
-        <h4>Earth from space</h4>
-        <p>
-            <a href="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss045e048728.jpg?itok=JNQ4MYLJ"target="_blank">  <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss045e048728.jpg?itok=JNQ4MYLJ"width="200" height="200"/></a>
-        </p>
-        <p><a class="btn btn-default" href="https://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank">More images from Nasa &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h4>The moon</h4>
-        <p>
-            <a href="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/nh-charon-neutral-bright-release.jpg?itok=GuyV7MNC" target="_blank">  <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/nh-charon-neutral-bright-release.jpg?itok=GuyV7MNC" width="200" height="200" /></a>
-        </p>
-        <p><a class="btn btn-default" href="https://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank">More images from Nasa &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h4>Rocket launch</h4>
-        <p>
-            <a href="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/41g-90139.jpg?itok=OPwNpxYA" target="_blank">  <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/41g-90139.jpg?itok=OPwNpxYA" width="200" height="200" /></a>
-        </p>
-        <p><a class="btn btn-default" href="https://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank">More images from Nasa &raquo;</a></p>
+@{
+    ViewBag.Title = "Images";
+}
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<div class="container">
+    <div class="header">
+        <h1 class="text-muted">Portfolio</h1>
     </div>
 
+    <div id="slider">
+        <ul class="slides">
+            <li class="slide slide1"><img src="http://assets22.pokemon.com/assets/cms2/img/pokedex/full/384.png"/></li>
+            <li class="slide slide1"><img src="http://weknowyourdreams.com/images/pokemon/pokemon-07.jpg"/></li>
+            <li class="slide slide3"><img src="http://assets19.pokemon.com/assets/cms2/img/pokedex/full//001.png"/></li>
+            <li class="slide slide4"><img src="https://images-na.ssl-images-amazon.com/images/G/01/videogames/detail-page/pokemon.blk-wte.snivy.lg.jpg"/></li>
+            <li class="slide slide5"><img src="http://www.picgifs.com/clip-art/cartoons/pokemon/clip-art-pokemon-150436.jpg"/></li>
+            <li class="slide slide1"><img src="http://assets22.pokemon.com/assets/cms2/img/pokedex/full/393.png"/></li>
+        </ul>
     </div>
+
+</div>
+<script>
+$(function() {
+
+    //settings for slider
+    var width = 1000;
+    var animationSpeed = 3000;
+    var pause = 1000;
+    var currentSlide = 1;
+
+    //cache DOM elements
+    var $slider = $('#slider');
+    var $slideContainer = $('.slides', $slider);
+    var $slides = $('.slide', $slider);
+
+    var interval;
+
+    function startSlider() {
+        interval = setInterval(function() {
+            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+                if (++currentSlide === $slides.length) {
+                    currentSlide = 1;
+                    $slideContainer.css('margin-left', 0);
+                }
+            });
+        }, pause);
+    }
+    function pauseSlider() {
+        clearInterval(interval);
+    }
+
+    $slideContainer
+        .on('mouseenter', pauseSlider)
+        .on('mouseleave', startSlider);
+
+    startSlider();
+
+
+});
+</script>
